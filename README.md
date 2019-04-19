@@ -28,6 +28,7 @@ Simple example:
 remote_homeassistant:
   instances:
   - host: raspberrypi.local
+    access_token: !secret access_token
 ```
 
 
@@ -65,7 +66,7 @@ secure:
   type: bool
 access_token:
   description: Access token of the remote instance, if set. Mutually exclusive with api_password
-  required: false
+  required: true
   type: string
 api_password:
   description: DEPRECTAED! API password of the remote instance, if set. Mutually exclusive with access_token
